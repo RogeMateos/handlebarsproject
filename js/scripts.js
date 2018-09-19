@@ -35,9 +35,15 @@ var cast = {
 			"location": "unknown"
 		}
 	]
-}
+};
 
 
+$(document).ready(function(){
 
+	var characterTemplate = $("#character-template").html();
+
+	var compiledCharacterTemplate = Handlebars.compile(characterTemplate);
+	$(".character-list-container").html(compiledCharacterTemplate(cast.characters[2]));
+});
 
 
